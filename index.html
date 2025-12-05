@@ -182,8 +182,8 @@
     <section class="section">
       <div class="container">
         <div class="columns is-centered m-6">
-          <div class="column is-full has-text-centered content">
-            <h2 class="title is-3" id="leaderboard">Leaderboard</h2>
+          <div class="column is-four-fifths has-text-centered content">
+            <h2 class="title is-3">Leaderboard</h2>
             <div class="content has-text-justified">
               <p>
                 We evaluate various models including LLMs and LMMs.
@@ -277,18 +277,18 @@
             <h2 class="title is-3">Error Analysis</h2>
             <div class="content has-text-justified">
               <p>
-                We delve into the analysis of errors by GPT-4V, a pivotal aspect for understanding its operational capabilities and limitations.
-                This analysis serves not only to identify the model's current shortcomings but also to guide future enhancements in its design and training.
-                We meticulously examine 150 randomly sampled error instances from GPT-4V's predictions.
-                These instances are analyzed by expert annotators who identify the root causes of mispredictions based on their knowledge and the golden explanations if available.
-                The distribution of these errors is illustrated in Figure, and a selection of 100 notable cases, along with detailed analyses, is included in the Appendix.
+                We study on the errors made by GPT-5 and Gemini-2.5-Pro, the two strongest models on MMR-Life. For each model, we randomly select 20 incorrect examples from each reasoning type and identify the root causes of the model's erroneous responses. 
+                The results reveal that reasoning errors dominate at 32%, with the model frequently making basic logical mistakes such as causal inversion (24%), temporal confusion (42%), and missing key steps (24%) during reasoning. 
+                In addition, abstraction errors (17%), which reflect the model’s short-term thinking capabilities, such as the ability to make associations, are also notable.
+                Knowledge errors (17%) and  perception errors (12%) constitute substantial portions of failures, indicating challenges in recalling the correct knowledge for reasoning, as well as difficulties in identifying static attributes of objects (e.g., color, shape) and dynamic changes (e.g., movement). 
+                By systematically examining these failures, we not only expose critical shortcomings in current MLLMs but also derive actionable insights that can inform the next generation of MLLMs.
               </p>
             </div>
             <div class="content has-text-centered">
               <img src="static/images/gpt-5_error.png" alt="error distribution" width="25%">
-              <p> Error distribution over 150 annotated GPT-4V errors.</p>
+              <p> Error distribution over 140 annotated GPT-5 errors.</p>
               <img src="static/images/gemini_error.png" alt="error distribution" width="25%">
-              <p> Error distribution over 150 annotated GPT-4V errors.</p>
+              <p> Error distribution over 140 annotated Geimini-2.5-Pro errors.</p>
             </div>
           </div>
         </div>
@@ -409,8 +409,9 @@
        
         <div class="columns is-centered m-6">
           <div class="column is-full has-text-centered content">
-            <h2 class="title is-3">Correct Examples</h2>
-            <div id="results-carousel" class="carousel results-carousel">
+            <h2 class="title is-3" id="examples">Correct Examples</h2>
+            <div class="carousel results-carousel">
+            <!-- <div id="results-carousel" class="carousel results-carousel"> -->
               <div class="box m-5">
                 <div class="content has-text-centered">
                   <img src="static/images/correct/1.png" alt="grade-lv" width="60%"/>
@@ -519,6 +520,7 @@
             </div>
           </div>
         </div>
+        
       </div>
     </section>
 
