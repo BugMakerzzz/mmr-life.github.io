@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>MMR-Life: Piecing Together Real-life Scenes for Multimodal Multi-image Reasoning</title>
+    <title>MMR-Life</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://kit.fontawesome.com/f8ddf9854a.js" crossorigin="anonymous"></script>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description"
-          content="MMR-Life: Piecing Together Real-life Scenes for Multimodal Multi-image Reasoning, a comprehensive benchmark for Multimodal Multi-image Reasoning.">
-    <meta name="keywords" content="MMR-Life, MMMU, LMM, LMM Evaluation, Vision Language Model, Large Language Model, Large Multimodal Model, artificial intelligence, AI, AGI">
+          content="MMR-Life: Piecing Together Real-life Scenes for Multimodal Multi-image Reasoning">
+    <meta name="keywords" content="MMMU, LMM, LMM Evaluation, Vision Language Model, Large Language Model, Large Multimodal Model, artificial intelligence, AI, AGI, artificial general intelligence">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> MMR-Life: Piecing Together Real-life Scenes for Multimodal Multi-image Reasoning</title>
 
     <link rel="icon" href="./static/images/icon.png">
 
@@ -18,150 +21,165 @@
     <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
     <link rel="stylesheet" href="./static/css/index.css">
-
-    <script src="https://kit.fontawesome.com/f8ddf9854a.js" crossorigin="anonymous" async></script>
+    <script src="https://kit.fontawesome.com/fff5b27ec1.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/eaf1856e6f.js" crossorigin="anonymous"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
   </head>
   <body>
 
-    <header>
-      <section class="hero">
-        <div class="hero-body">
-          <div class="container is-max-desktop">
-            <div class="columns is-centered">
+
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-1 publication-title is-bold">
+                <img src="static/images/icon.png" style="width:1em;vertical-align: middle" alt="Logo"/>
+                <span class="mmmu" style="vertical-align: middle">MMR-Life</span>
+              </h1>
+              <h2 class="subtitle is-3 publication-subtitle">
+                Piecing Together Real-life Scenes <br> for Multimodal Multi-image Reasoning
+              </h2>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">
+                  <a href="https://xiangyue9607.github.io/" style="text-decoration: none; color: inherit;">Xiang Yue*†</a>,
+                </span>
+                <span class="author-block">
+                  <a href="https://yuanshengni.github.io/" style="text-decoration: none; color: inherit;">Yuansheng Ni*</a>,
+                </span>
+                <span class="author-block">
+                  <a href="https://drogozhang.github.io/" style="text-decoration: none; color: inherit;">Kai Zhang*</a>,
+                </span>
+                <span class="author-block">
+                  <a href="https://scholar.google.com/citations?hl=en&user=Vq-VZnUAAAAJ" style="text-decoration: none; color: inherit;">Tianyu Zheng*</a>,
+                </span>
+                <br>
+                <span class="author-block">Ruoqi Liu,</span>
+                <span class="author-block">Ge Zhang,</span>
+                <span class="author-block">Samuel Stevens,</span>
+                <span class="author-block">Dongfu Jiang,</span>
+                <span class="author-block">Weiming Ren,</span>
+                <span class="author-block">Yuxuan Sun,</span>
+                <span class="author-block">Cong Wei,</span>
+                <span class="author-block">Botao Yu,</span>
+                <span class="author-block">Ruibin Yuan,</span>
+                <span class="author-block">Renliang Sun,</span>
+                <span class="author-block">Ming Yin,</span>
+                <span class="author-block">Boyuan Zheng,</span>
+                <span class="author-block">Zhenzhu Yang,</span>
+                <span class="author-block">Yibo Liu,</span>
+                <span class="author-block">Wenhao Huang,</span><br>
+                <span class="author-block">
+                  <a href="https://web.cse.ohio-state.edu/~sun.397/" style="text-decoration: none; color: inherit;">Huan Sun*</a>,
+                </span>
+                <span class="author-block">
+                  <a href="https://ysu1989.github.io/" style="text-decoration: none; color: inherit;">Yu Su*†</a>,
+                </span>
+                <span class="author-block">
+                  <a href="https://wenhuchen.github.io/" style="text-decoration: none; color: inherit;">Wenhu Chen*†</a>
+                </span>
+              </div>
+
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">*Core Contributors</span><br>
+                <span class="author-block">†Corresponding to:</span>
+                <span class="author-block"><a href="mailto:xiangyue.work@gmail.com">xiangyue.work@gmail.com</a></span>
+            
+              </div>
+
               <div class="column has-text-centered">
-                <h1 class="title is-1 publication-title is-bold">
-                  <img src="static/images/icon.png" style="width:1em; vertical-align: middle;" alt="MMR-Life Logo"/>
-                  <span class="mmmu" style="vertical-align: middle;">MMR-Life</span>
-                </h1>
-                <h2 class="subtitle is-3 publication-subtitle">
-                  Piecing Together Real-life Scenes <br> for Multimodal Multi-image Reasoning
-                </h2>
-                <div class="is-size-5 publication-authors">
-                  <span class="author-block">
-                    <a href="https://xiangyue9607.github.io/" aria-label="Jiachun Li homepage">Jiachun Li*†</a>,
-                  </span>
-                  <span class="author-block">
-                    <a href="https://yuanshengni.github.io/" aria-label="Shaoping Huang homepage">Shaoping Huang*</a>,
-                  </span>
-                  <span class="author-block">
-                    <a href="https://drogozhang.github.io/" aria-label="Kai Zhang homepage">Kai Zhang*</a>,
-                  </span>
-                  <span class="author-block">
-                    <a href="https://scholar.google.com/citations?hl=en&user=Vq-VZnUAAAAJ" aria-label="Tianyu Zheng Google Scholar">Tianyu Zheng*</a>,
-                  </span>
-                  <br>
-                  <span class="author-block">Ruoqi Liu,</span>
-                  <span class="author-block">Ge Zhang,</span>
-                  <span class="author-block">Samuel Stevens,</span>
-                  <span class="author-block">Dongfu Jiang,</span>
-                  <span class="author-block">Weiming Ren,</span>
-                  <span class="author-block">Yuxuan Sun,</span>
-                  <span class="author-block">
-                    <a href="https://web.cse.ohio-state.edu/~sun.397/" aria-label="Huan Sun homepage">Huan Sun*</a>,
-                  </span>
-                  <span class="author-block">
-                    <a href="https://ysu1989.github.io/" aria-label="Kang Liu homepage">Kang Liu*†</a>,
-                  </span>
-                  <span class="author-block">
-                    <a href="https://wenhuchen.github.io/" aria-label="Jun Zhao homepage">Jun Zhao*†</a>
-                  </span>
-                </div>
+                <div class="publication-links">
 
-                <div class="is-size-5 publication-authors">
-                  <span class="author-block">*Core Contributors</span><br>
-                  <span class="author-block">†Corresponding to:</span>
-                  <span class="author-block"><a href="mailto:xiangyue.work@gmail.com">xiangyue.work@gmail.com</a></span>
-                </div>
+                  <span class="link-block">
+                    <a href="https://arxiv.org/abs/2311.16502" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>arXiv</span>
+                    </a>
+                  </span>
 
-                <div class="column has-text-centered">
-                  <div class="publication-links">
+                  <span class="link-block">
+                    <a href="https://huggingface.co/datasets/Septzzz/MMR-Life" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon" style="font-size:18px">🤗</span>
+                      <span>MMR-Life</span>
+                    </a>
+                  </span>
 
-                    <span class="link-block">
-                      <a href="https://arxiv.org/abs/2311.16502" class="external-link button is-normal is-rounded is-dark" aria-label="Read the paper on arXiv">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>arXiv</span>
-                      </a>
-                    </span>
-
-                    <span class="link-block">
-                      <a href="https://huggingface.co/datasets/Septzzz/MMR-Life" class="external-link button is-normal is-rounded is-dark" aria-label="MMR-Life dataset on Hugging Face">
-                        <span class="icon" style="font-size:18px">🤗</span>
-                        <span>MMR-Life</span>
-                      </a>
-                    </span>
-
-                    <span class="link-block">
-                      <a href="https://github.com/BugMakerzzz/MMR-Life" class="external-link button is-normal is-rounded is-dark" aria-label="View the code on GitHub">
-                        <span class="icon">
-                          <i class="fab fa-github"></i>
-                        </span>
-                        <span>Code</span>
-                      </a>
-                    </span>
-                    
-                  </div>
+                  <span class="link-block">
+                    <a href="https://github.com/BugMakerzzz/MMR-Life" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>Code</span>
+                    </a>
+                  </span>
+                  
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
-    </header>
+      </div>
+    </section>
 
-    <main>
-      <section class="section">
-        <div class="container" style="margin-bottom: 2vh;">
-          <div class="columns is-centered has-text-centered">
-            <div class="column is-full">
-              <h2 class="title is-3">Abstract</h2>
-              <div class="content has-text-justified">
-                <p>
-                  We introduce MMR-Life, a comprehensive benchmark designed to evaluate the diverse multimodal multi-image reasoning capabilities of MLLMs across real-life scenarios. MMR-Life consists of 2,676 multiple-choice questions based on 19,367 images primarily sourced from real-world contexts, comprehensively covering seven reasoning types: **abductive**, **analogical**, **causal**, **deductive**, **inductive**, **spatial**, and **temporal**. Unlike existing reasoning benchmarks, MMR-Life does not rely on domain-specific expertise but instead requires models to integrate information across multiple images and apply diverse reasoning abilities. The evaluation of 37 advanced models highlights the substantial challenge posed by MMR-Life. Even top models like GPT-5 achieve only **58% accuracy** and display considerable variance in performance across reasoning types. Moreover, we analyze the reasoning paradigms of existing MLLMs, exploring how factors such as thinking length, reasoning method, and reasoning type affect their performance. In summary, MMR-Life establishes a comprehensive foundation for evaluating, analyzing, and improving the next generation of multimodal reasoning systems.
-                </p>
-                
-                <br>
-              </div>
+    <section class="section">
+      <div class="container" style="margin-bottom: 2vh;">
+        <!-- Abstract. -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                We introduce MMR-Life, a comprehensive benchmark designed to evaluate the diverse multimodal multi-image reasoning capabilities of MLLMs across real-life scenarios. MMR-Life consists of 2,676 multiple-choice questions based on 19,367 images primarily sourced from real-world contexts, comprehensively covering seven reasoning types: abductive, analogical, causal, deductive, inductive, spatial, and temporal. Unlike existing reasoning benchmarks, MMR-Life does not rely on domain-specific expertise but instead requires models to integrate information across multiple images and apply diverse reasoning abilities. The evaluation of 37 advanced models highlights the substantial challenge posed by MMR-Life. Even top models like GPT-5 achieve only 58\% accuracy and display considerable variance in performance across reasoning types. Moreover, we analyze the reasoning paradigms of existing MLLMs, exploring how factors such as thinking length, reasoning method, and reasoning type affect their performance. In summary, MMR-Life establishes a comprehensive foundation for evaluating, analyzing, and improving the next generation of multimodal reasoning systems.
+              </p>
+              <img src="static/images/intro.png" alt="algebraic reasoning" width="100%">
+              <br>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="hero is-light is-small">
-        <div class="hero-body has-text-centered">
-          <h1 class="title is-1 mmmu">
-            <img src="static/images/icon.png" alt="Logo" class="mmmu-logo"/>
-            <span class="mmmu">MMR-Life Benchmark</span>
-          </h1>
-        </div>
-      </section>
+    <!-- DATASET SECTION -->
+    <section class="hero is-light is-small">
+      <div class="hero-body has-text-centered">
+        <h1 class="title is-1 mmmu">
+          <img src="static/images/icon.png" alt="Logo" class="mmmu-logo"/>
+          <span class="mmmu">MMR-Life Benchmark</span>
+        </h1>
+      </div>
+    </section>
 
-      <section class="section">
-        <div class="container">
-          <div class="columns is-centered has-text-centered">
-            <div class="column is-four-fifths">
-              <h2 class="title is-3">Overview</h2>
-              <div class="content has-text-justified">
-                <p>
-                  We introduce the **Multimodal Multi-image Reasoning benchmark under real-Life scenarios (MMR-Life)**, a novel benchmark meticulously curated to evaluate the ability of MLLMs to perform diverse types of reasoning in everyday situations.
-                </p>
-                
-                <br>
-                <p>
-                  MMR-Life consists of **2,676 multiple-choice questions** based on **19,367 images**, comprehensively covering **7 reasoning types** (i.e., abductive, analogical, causal, deductive, inductive, spatial, and temporal) and **21 tasks**. Each task is based on a set of multi-images, predominantly sourced from real-life contexts, such as domestic life, daily dining, and sports activities.
-                </p>
-              </div>
+    <section class="section">
+      <div class="container">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Overview</h2>
+            <div class="content has-text-justified">
+              <p>
+                We introduce the Multimodal Multi-image Reasoning benchmark under real-Life scenarios (MMR-Life), a novel benchmark meticulously curated to evaluate the ability of MLLMs to perform diverse types of reasoning in everyday situations.
+              </p>
+              <img src="static/images/example.png" alt="algebraic reasoning" class="center">
+              <br>
+              <p>
+                MMR-Life consists of 2,676 multiple-choice questions based on 19,367 images, comprehensively covering 7 reasoning types (i.e., abductive, analogical, causal, deductive, inductive, spatial, and temporal) and 21 tasks. Each task is based on a set of multi-images, predominantly sourced from real-life contexts, such as domestic life, daily dining, and sports activities.
+              </p>
             </div>
           </div>
         </div>
-      </section>
-      
-      <section class="hero is-light is-small">
-        <div class="hero-body has-text-centered">
-          <h1 class="title is-1 mmmu">Experiment Results</h1>
-        </div>
-      </section>
+
+      </div>
+    </section>
+    <section class="hero is-light is-small">
+      <div class="hero-body has-text-centered">
+        <h1 class="title is-1 mmmu">Experiment Results</h1>
+      </div>
+    </section>
 
       <section class="section">
         <div class="container">
@@ -297,5 +315,6 @@
     <script src="./static/js/leaderboard.js"></script>
     <script src="./static/js/leaderboard_data.js"></script>
     <script src="./static/js/sort-table.js"></script>
+    <script src="./static/js/index.js"></script>
   </body>
 </html>
